@@ -25,7 +25,11 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPlainTextEdit" name="plainTextEdit"/>
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="centerOnScroll">
+        <bool>false</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
