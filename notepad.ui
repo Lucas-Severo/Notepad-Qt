@@ -94,16 +94,28 @@
    <addaction name="actionExit_2"/>
   </widget>
   <action name="actionnew">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/add-file.png</normaloff>:/imgs/img/add-file.png</iconset>
+   </property>
    <property name="text">
     <string>New</string>
    </property>
   </action>
   <action name="actionopen">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/open.png</normaloff>:/imgs/img/open.png</iconset>
+   </property>
    <property name="text">
     <string>Open</string>
    </property>
   </action>
   <action name="actionsave">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/save.png</normaloff>:/imgs/img/save.png</iconset>
+   </property>
    <property name="text">
     <string>Save</string>
    </property>
@@ -114,6 +126,10 @@
    </property>
   </action>
   <action name="actionprint">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/print.png</normaloff>:/imgs/img/print.png</iconset>
+   </property>
    <property name="text">
     <string>print</string>
    </property>
@@ -129,26 +145,46 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/copy.png</normaloff>:/imgs/img/copy.png</iconset>
+   </property>
    <property name="text">
     <string>Copy</string>
    </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/cut.png</normaloff>:/imgs/img/cut.png</iconset>
+   </property>
    <property name="text">
     <string>Cut</string>
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/paste.png</normaloff>:/imgs/img/paste.png</iconset>
+   </property>
    <property name="text">
     <string>Paste</string>
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/undo.png</normaloff>:/imgs/img/undo.png</iconset>
+   </property>
    <property name="text">
     <string>Undo</string>
    </property>
   </action>
   <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/redo.png</normaloff>:/imgs/img/redo.png</iconset>
+   </property>
    <property name="text">
     <string>Redo</string>
    </property>
@@ -159,6 +195,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
