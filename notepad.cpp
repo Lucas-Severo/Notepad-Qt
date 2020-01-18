@@ -7,7 +7,7 @@ Notepad::Notepad(QWidget *parent)
 {
     ui->setupUi(this);
 
-    this->setCentralWidget(ui->plainTextEdit);
+    this->setCentralWidget(ui->textEdit);
 }
 
 Notepad::~Notepad()
@@ -15,3 +15,9 @@ Notepad::~Notepad()
     delete ui;
 }
 
+
+void Notepad::on_actionnew_triggered()
+{
+    currentFile.clear();
+    ui->textEdit->setText(currentFile);
+}

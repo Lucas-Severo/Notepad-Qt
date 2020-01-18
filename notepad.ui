@@ -25,11 +25,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPlainTextEdit" name="plainTextEdit">
-       <property name="centerOnScroll">
-        <bool>false</bool>
-       </property>
-      </widget>
+      <widget class="QTextEdit" name="textEdit"/>
      </item>
     </layout>
    </widget>
@@ -52,7 +48,6 @@
     <addaction name="actionsave"/>
     <addaction name="actionsave_as"/>
     <addaction name="actionExit"/>
-    <addaction name="actionExit_2"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -91,7 +86,6 @@
    <addaction name="actionRedo"/>
    <addaction name="actionSelect_Font"/>
    <addaction name="separator"/>
-   <addaction name="actionExit_2"/>
   </widget>
   <action name="actionnew">
    <property name="icon">
@@ -135,11 +129,6 @@
    </property>
   </action>
   <action name="actionExit">
-   <property name="text">
-    <string>Print</string>
-   </property>
-  </action>
-  <action name="actionExit_2">
    <property name="text">
     <string>Exit</string>
    </property>
