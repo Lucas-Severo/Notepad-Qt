@@ -9,5 +9,7 @@
         <file>img/paste.png</file>
         <file>img/redo.png</file>
         <file>img/undo.png</file>
+        <file>img/exit.png</file>
+        <file>img/font.png</file>
     </qresource>
 </RCC>

@@ -10,6 +10,8 @@
 #include <QPrintDialog>
 #include <QPrinter>
 
+#include <QDebug>
+
 Notepad::Notepad(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Notepad)
@@ -104,4 +106,28 @@ void Notepad::on_actionPrint_triggered()
     if(dialog.exec() == QDialog::Rejected)
         return;
     ui->textEdit->print(&printer);
+}
+
+void Notepad::on_actionExit_triggered()
+{
+    if(currentFile.isEmpty())
+        QCoreApplication::quit();
+    else{
+        QFile file(currentFile);
+        if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            return;
+        QString text1 = ui->textEdit->toPlainText();
+        QString text = file.readAll();
+        file.close();
+
+        if(QString::compare(text1, text)){
+            QMessageBox::StandardButton resp;
+            resp = QMessageBox::question(this, "Exit", "The file has been modified, are you sure you want to exit?",
+                                         QMessageBox::Yes | QMessageBox::No);
+            if(resp==QMessageBox::Yes)
+                QCoreApplication::exit();
+        } else {
+            QCoreApplication::exit();
+        }
+    }
 }

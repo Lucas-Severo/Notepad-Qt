@@ -87,6 +87,7 @@
    <addaction name="actionRedo"/>
    <addaction name="actionSelect_Font"/>
    <addaction name="separator"/>
+   <addaction name="actionExit"/>
   </widget>
   <action name="actionnew">
    <property name="icon">
@@ -121,6 +122,10 @@
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/exit.png</normaloff>:/imgs/img/exit.png</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
@@ -171,6 +176,10 @@
    </property>
   </action>
   <action name="actionSelect_Font">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/imgs/img/font.png</normaloff>:/imgs/img/font.png</iconset>
+   </property>
    <property name="text">
     <string>Select Font</string>
    </property>

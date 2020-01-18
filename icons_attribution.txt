@@ -7,3 +7,5 @@ paste icon - Icon made by Smashicons from www.flaticon.com
 cut icon - Icon made by Those Icons from www.flaticon.com 
 undo icon - Icon made by Pixel perfect from www.flaticon.com 
 redo icon -  Icon made by Google from www.flaticon.com 
+exit icon - Icon made by Pixel perfect from www.flaticon.com 
+font icon - Icon made by Those Icons from www.flaticon.com 
