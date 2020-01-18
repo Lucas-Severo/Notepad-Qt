@@ -6,6 +6,10 @@
 #include <QMessageBox>
 #include <QTextStream>
 
+#include <QtPrintSupport>
+#include <QPrintDialog>
+#include <QPrinter>
+
 Notepad::Notepad(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Notepad)
@@ -93,13 +97,11 @@ void Notepad::on_actionsave_as_triggered()
 }
 
 
-
-
-
-
-
-
-
-
-
-
+void Notepad::on_actionPrint_triggered()
+{
+    QPrinter printer;
+    QPrintDialog dialog(&printer, this);
+    if(dialog.exec() == QDialog::Rejected)
+        return;
+    ui->textEdit->print(&printer);
+}
