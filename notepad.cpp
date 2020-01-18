@@ -40,3 +40,43 @@ void Notepad::on_actionopen_triggered()
     QString text = in.readAll();
     ui->textEdit->setText(text);
 }
+
+void Notepad::on_actionsave_triggered()
+{
+    QString fileName;
+
+    if(currentFile.isEmpty())
+    {
+        fileName = QFileDialog::getSaveFileName(this, "save");
+        currentFile = fileName;
+    } else {
+        fileName = currentFile;
+    }
+
+    QFile file(fileName);
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QMessageBox::information(this, "Information", "Cannot save the file: ", file.errorString());
+        return;
+    }
+
+    QTextStream out(&file);
+    QString text = ui->textEdit->toPlainText();
+    out << text;
+    file.close();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
