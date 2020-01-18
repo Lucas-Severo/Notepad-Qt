@@ -22,6 +22,8 @@ private slots:
 
     void on_actionsave_triggered();
 
+    void on_actionsave_as_triggered();
+
 private:
     Ui::Notepad *ui;
     QString currentFile;

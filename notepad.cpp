@@ -25,6 +25,7 @@ void Notepad::on_actionnew_triggered()
 {
     currentFile.clear();
     ui->textEdit->setText(currentFile);
+    setWindowTitle("Notepad");
 }
 
 void Notepad::on_actionopen_triggered()
@@ -36,9 +37,13 @@ void Notepad::on_actionopen_triggered()
         QMessageBox::information(this, "Information", "cannot open file: ", file.errorString());
         return;
     }
+    setWindowTitle(filename);
+    currentFile = filename;
+
     QTextStream in(&file);
     QString text = in.readAll();
     ui->textEdit->setText(text);
+    file.close();
 }
 
 void Notepad::on_actionsave_triggered()
@@ -60,14 +65,32 @@ void Notepad::on_actionsave_triggered()
         return;
     }
 
+    setWindowTitle(fileName);
     QTextStream out(&file);
     QString text = ui->textEdit->toPlainText();
     out << text;
     file.close();
 }
 
+void Notepad::on_actionsave_as_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, "save as");
+    currentFile = fileName;
 
+    QFile file(fileName);
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QMessageBox::warning(this, "Information", "cannot save the file: " + file.errorString());
+        return;
+    }
 
+    setWindowTitle(fileName);
+    QTextStream out(&file);
+    QString text = ui->textEdit->toPlainText();
+    out << text;
+
+    file.close();
+}
 
 
 
