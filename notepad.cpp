@@ -151,3 +151,8 @@ void Notepad::on_actionUndo_triggered()
 {
     ui->textEdit->undo();
 }
+
+void Notepad::on_actionRedo_triggered()
+{
+    ui->textEdit->redo();
+}
