@@ -38,6 +38,8 @@ private slots:
 
     void on_actionRedo_triggered();
 
+    void on_actionSelect_Font_triggered();
+
 private:
     Ui::Notepad *ui;
     QString currentFile;

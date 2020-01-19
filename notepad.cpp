@@ -10,7 +10,8 @@
 #include <QPrintDialog>
 #include <QPrinter>
 
-#include <QDebug>
+#include <QFont>
+#include <QFontDialog>
 
 Notepad::Notepad(QWidget *parent)
     : QMainWindow(parent)
@@ -155,4 +156,12 @@ void Notepad::on_actionUndo_triggered()
 void Notepad::on_actionRedo_triggered()
 {
     ui->textEdit->redo();
+}
+
+void Notepad::on_actionSelect_Font_triggered()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, this);
+    if(ok)
+        ui->textEdit->setFont(font);
 }
