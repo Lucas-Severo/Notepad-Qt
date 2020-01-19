@@ -141,3 +141,8 @@ void Notepad::on_actionCut_triggered()
 {
     ui->textEdit->cut();
 }
+
+void Notepad::on_actionPaste_triggered()
+{
+    ui->textEdit->paste();
+}

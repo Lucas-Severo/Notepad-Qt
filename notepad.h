@@ -32,6 +32,8 @@ private slots:
 
     void on_actionCut_triggered();
 
+    void on_actionPaste_triggered();
+
 private:
     Ui::Notepad *ui;
     QString currentFile;
