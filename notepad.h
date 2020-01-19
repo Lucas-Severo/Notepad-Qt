@@ -40,6 +40,8 @@ private slots:
 
     void on_actionSelect_Font_triggered();
 
+    void on_actionAbout_triggered();
+
 private:
     Ui::Notepad *ui;
     QString currentFile;

@@ -12,6 +12,7 @@
 
 #include <QFont>
 #include <QFontDialog>
+#include <iomanip>
 
 Notepad::Notepad(QWidget *parent)
     : QMainWindow(parent)
@@ -164,4 +165,29 @@ void Notepad::on_actionSelect_Font_triggered()
     QFont font = QFontDialog::getFont(&ok, this);
     if(ok)
         ui->textEdit->setFont(font);
+}
+
+void Notepad::on_actionAbout_triggered()
+{
+    QString attributions[] = {"open icon - Icon made by Freepik from www.flaticon.com",
+                              "add icon - Icon made by Kiranshastry from www.flaticon.com",
+                              "save icon - Icon made by Freepik from www.flaticon.com",
+                              "print icon - Icon made by Those Icons from www.flaticon.com",
+                              "copy icon - Icon made by monkik from www.flaticon.com",
+                              "paste icon - Icon made by Smashicons from www.flaticon.com",
+                              "cut icon - Icon made by Those Icons from www.flaticon.com",
+                              "undo icon - Icon made by Pixel perfect from www.flaticon.com",
+                              "redo icon -  Icon made by Google from www.flaticon.com",
+                              "exit icon - Icon made by Pixel perfect from www.flaticon.com",
+                              "font icon - Icon made by Those Icons from www.flaticon.com"};
+
+    QString msg = tr("<b>Application made with QT and C++</b><br/><br/>\
+                   <b>Icons Attributions:</b><br/>");
+
+    for(auto attribution: attributions)
+    {
+        msg += "<hr><i>" + attribution + "</i>" + "<br/>";
+    }
+
+    QMessageBox::about(this, "About", msg);
 }
