@@ -28,6 +28,8 @@ private slots:
 
     void on_actionExit_triggered();
 
+    void on_actionCopy_triggered();
+
 private:
     Ui::Notepad *ui;
     QString currentFile;

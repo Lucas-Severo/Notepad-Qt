@@ -131,3 +131,8 @@ void Notepad::on_actionExit_triggered()
         }
     }
 }
+
+void Notepad::on_actionCopy_triggered()
+{
+    ui->textEdit->copy();
+}
